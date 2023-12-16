@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="app">
+
+        <div id="container" :class=" typeof( weather.main) !== `undefined` &&  Math.round(weather.main.temp) <16 ? 'cold' : '' ">
+
+            <form @submit.prevent="getWeather">
+                <input type="text" class="search-box" placeholder="Search a location " v-model=" searchQuery">
+            </form>
+            <p style="color: crimson;">{{ errorMsg }}</p>
+
+            <div v-if=" typeof( weather.main) !== `undefined` ">
+
+                <h4 class="location "> {{ weather.name }} , {{ weather.sys.country }}</h4>
+                <h2>{{ getCurrentDate() }}</h2>
+
+                <div class="bg-class ">
+                    <h3>{{ Math.round(weather.main.temp) }}° C</h3>
+
+
+                </div>
+
+                <h3 class="weather ">{{ weather.weather[0].main }}</h3>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js "></script>
+<script src="./app.js "></script>
+
+</html>
