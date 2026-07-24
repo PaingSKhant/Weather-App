@@ -1,28 +1,28 @@
 body {
-    display: flex;
+    box-sizing: border-box;
     border: 2px solid red;
-    margin: 0;
     width: 100vw;
     height: 100vh;
-}
-#menu {
-    padding-top: 65px;
-    width: 250px;
-    background-color: rgb(26, 125, 218);
-    color: white;
-    text-align: center;
-}
-button {
-    color: white;
+    margin: 0;
 }
 
-#mainScreen {
-    flex-grow: 1;
-    background-color: gray;
+#search-section {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 98%;
 }
 
-.title {
-    padding: 50px;
-    text-align: center;
-    color: red;
+#search-bar {
+    display: flex;
+    justify-self: center;
+    width: 30%;
 }
+
+#display-section {
+    display: flex;
+    border: 2px solid red;
+    justify-content: center;
+}
+
