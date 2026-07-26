@@ -1,7 +1,7 @@
 import { API_KEY } from "./api-key.js";
 
-const searchBar = document.getElementById("search-bar");
-const searchBtn = document.getElementById("search-btn");
+export const searchBar = document.getElementById("search-bar");
+export const searchBtn = document.getElementById("search-btn");
 
 async function fetchData(location) {
   const response = await fetch(
@@ -25,7 +25,7 @@ function processData(data) {
   };
 }
 
-async function handleSearch() {
+export async function handleSearch() {
   const location = searchBar.value.trim();
   if (!location) return;
 
@@ -38,14 +38,6 @@ async function handleSearch() {
     weatherCard(weather);
     searchBar.value = "";
   }
-}
-
-export function init() {
-  searchBar.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") handleSearch();
-  });
-
-  searchBtn.addEventListener("click", handleSearch);
 }
 
 function weatherCard(weather) {
