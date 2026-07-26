@@ -1,4 +1,5 @@
 import { API_KEY } from "./api-key.js";
+import { weatherCard } from "./view.js";
 
 export const searchBar = document.getElementById("search-bar");
 export const searchBtn = document.getElementById("search-btn");
@@ -38,18 +39,4 @@ export async function handleSearch() {
     weatherCard(weather);
     searchBar.value = "";
   }
-}
-
-function weatherCard(weather) {
-  const timeZone = document.getElementById("time-zone");
-  const iconImage = document.getElementById("icon-image");
-  const temperature = document.getElementById("temperature");
-  const feelsLike = document.getElementById("feels-like");
-  const weatherCondition = document.getElementById("weather");
-
-  timeZone.textContent = weather.timeZone;
-  //icon here
-  temperature.textContent = weather.temp + " F";
-  feelsLike.textContent = "Feels Like " + weather.feelsLike;
-  weatherCondition.textContent = weather.condition;
 }

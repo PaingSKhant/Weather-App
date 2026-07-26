@@ -24,17 +24,13 @@ body {
   width: 30%;
 }
 
-#display-section {
-  display: flex;
-  border: 2px solid red;
-  justify-content: center;
-}
-
 img {
   margin-left: 2.5%;
   align-self: center;
   border: 2px solid red;
 }
+
+/*_____Main Display_____ */
 
 #display-section {
   display: flex;
@@ -43,11 +39,22 @@ img {
 }
 
 #condition {
+  display: flex;
+  flex-direction: column;
   margin-left: 2.5%;
   border: 2px solid blue;
+  width: 50%;
+  align-items: center;
 }
 
 #parameters {
   margin-right: 2.5%;
   border: 2px solid blue;
+  width: 30%;
+}
+
+#icon-image {
+  width: 48px;
+  height: auto;
+  border: 2px solid red;
 }
