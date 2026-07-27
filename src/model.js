@@ -26,6 +26,13 @@ function processData(data) {
   };
 }
 
+function changeTemp(format, temp) {
+  if (format === "C") {
+    return ((temp - 32) * 5) / 9;
+  }
+  return temp;
+}
+
 export async function handleSearch() {
   const location = searchBar.value.trim();
   if (!location) return;
