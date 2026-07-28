@@ -1,9 +1,10 @@
-import { API_KEY } from "./api-key.js";
 import { weatherCard } from "./view.js";
 
 export const searchBar = document.getElementById("search-bar");
 export const searchBtn = document.getElementById("search-btn");
 const display = document.getElementById("display-section");
+
+const API_KEY = "KTVRFJGGRWRV8Q83QX42G3PT8";
 
 let currentWeatherData = null;
 
