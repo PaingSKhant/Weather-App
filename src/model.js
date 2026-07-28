@@ -3,6 +3,7 @@ import { weatherCard } from "./view.js";
 
 export const searchBar = document.getElementById("search-bar");
 export const searchBtn = document.getElementById("search-btn");
+const display = document.getElementById("display-section");
 
 let currentWeatherData = null;
 
@@ -53,6 +54,7 @@ export async function handleSearch() {
   let data = await fetchData(location);
 
   if (data) {
+    display.style.display = "flex";
     weatherCard(data);
     searchBar.value = "";
   }
