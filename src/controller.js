@@ -18,17 +18,12 @@ function init() {
 
   searchBtn.addEventListener("click", handleSearch);
 
-  unitToggle.addEventListener("click", (e) => {
-    console.log(unitToggle.dataset.unit);
-
+  unitToggle.addEventListener("click", () => {
     if (unitToggle.dataset.unit === "F") {
       const newTemp = changeTemp("C", getTemp());
       updateTemp(newTemp, "C");
-
-      console.log("C get temp" + newTemp);
     } else {
       const newTemp = changeTemp("F", getTemp());
-      console.log("change back to F" + newTemp);
       updateTemp(newTemp, "F");
     }
   });
